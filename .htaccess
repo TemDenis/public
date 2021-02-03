@@ -1,0 +1,9 @@
+ RewriteEngine On
+
+
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteCond %{REQUEST_FILENAME} !-f
+ #RewriteCond $1 !^(config|webfonts|css|js|images|robots\.txt)
+
+ RewriteRule ^(.+)$ index.php?seo_name/$1 [L]
+
